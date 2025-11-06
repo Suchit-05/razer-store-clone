@@ -1,0 +1,272 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0c0c0c;
+  color: #e0e0e0;
+}
+
+/* ===== Header ===== */
+header {
+  background: #111;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #0f0;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 35px;
+  margin-right: 10px;
+}
+
+/* ===== Navigation ===== */
+nav a {
+  color: #0f0;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('/images/razer-banner.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #0f0;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  color: #a5f3a1;
+}
+
+/* ===== Product Section ===== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.product-card {
+  background: #111;
+  border: 1px solid #0f0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.product-card h3 {
+  color: #0f0;
+  margin: 1rem 0 0.5rem;
+}
+
+.product-card button {
+  background: #0f0;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.product-card button:hover {
+  background: #fff;
+  color: #0f0;
+}
+
+/* ===== Contact Page ===== */
+.contact {
+  padding: 80px 20px;
+  color: #0f0;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #a5f3a1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #0f0;
+  border-radius: 6px;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #0f0;
+  color: #000;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #a5f3a1;
+  color: #111;
+}
+
+/* ===== About Page ===== */
+.about {
+  background: #000;
+  color: #0f0;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #a5f3a1;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== Cart Page ===== */
+.cart {
+  background: #000;
+  color: #0f0;
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cart h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cart p {
+  color: #a5f3a1;
+  font-size: 1.1rem;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.cart li {
+  background: #111;
+  border: 1px solid #0f0;
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 15px;
+  color: #a5f3a1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart button {
+  background: #0f0;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart button:hover {
+  background: #a5f3a1;
+  color: #000;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #111;
+  color: #0f0;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #0f0;
+}

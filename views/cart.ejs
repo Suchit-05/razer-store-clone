@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<section class="cart">
+  <h1>Your Shopping Cart</h1>
+
+  <% if (cart.length === 0) { %>
+    <p>No items in cart yet!</p>
+  <% } else { %>
+    <ul>
+      <% cart.forEach(item => { %>
+        <li>
+          <span><%= item.name %> - $<%= item.price %> × <%= item.quantity %></span>
+          <form action="/cart/remove" method="POST" style="display:inline;">
+            <input type="hidden" name="id" value="<%= item.id %>">
+            <button type="submit">Remove</button>
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>
+
+<%- include('partials/footer') %>
