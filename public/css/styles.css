@@ -126,6 +126,7 @@ nav a:hover {
   padding: 0.6rem 1rem;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 10px;
   border-radius: 4px;
 }
 
